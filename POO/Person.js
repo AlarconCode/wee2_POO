@@ -3,8 +3,9 @@
 export class Person {
 
     // constructor
-    constructor(weight, heigth, yearOfBirth, hairColor, hobbies ) {
+    constructor(name,weight, heigth, yearOfBirth, hairColor, hobbies ) {
 
+        this.name = name
         this.weight = weight
         this.heigth = heigth
         this.yearOfBirth = yearOfBirth
