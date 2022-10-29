@@ -3,11 +3,11 @@
 export class Person {
 
     // constructor
-    constructor(name,weight, heigth, yearOfBirth, hairColor, hobbies ) {
+    constructor(name,weight, height, yearOfBirth, hairColor, hobbies ) {
 
         this.name = name
         this.weight = weight
-        this.heigth = heigth
+        this.height = height
         this.yearOfBirth = yearOfBirth
         this.hairColor = hairColor
         this.hobbies = hobbies
@@ -18,7 +18,7 @@ export class Person {
 
     // Calcular IMC
     calcIMC() {
-        let IMC = this.peso / (this.altura * this.altura)
+        let IMC = this.peso / (this.height * this.height)
         return IMC
     }
 
