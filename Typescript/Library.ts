@@ -31,7 +31,7 @@ export class Library {
     }
 
     setBooks(books:Book[]) {
-        this.books = books
+        this.books.push(...books)
     }
 
     setOneBook(book:Book){
@@ -46,14 +46,33 @@ export class Library {
         this.manager = manager
     }
 
-    toString() {
-       
-        this.books.forEach((value, index) => {
-            return ` Book${index+1}:
-            ${value}
-            `
-         })
-
+    toString():string {
+        
+        let arrResult:string[]=[]
+        for (let i=0; i<this.books.length; i++) {
+            
+           arrResult.push(`
+           Book${i+1}:
+           ${this.books[i].toString()}
+           ` ) 
+        }
+        return arrResult.join('')
     }
 
+    getNumberOfBooks():number {
+        return this.books.length
+    
+    }
+
+    findByAuthor(author:string) {
+        for (let book of this.books) {
+            if (author == book.getAuthor()) {
+                return book
+            } else {
+                return 'No hay libros de este autor'
+            }
+        } 
+        
+    }
+    
 }

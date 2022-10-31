@@ -72,8 +72,7 @@ export class Book {
                 result.push(`
                 ${property} - ${this[property]}`)
 
-            }
-                    
+            }       
         }
         return result.join('')
 
