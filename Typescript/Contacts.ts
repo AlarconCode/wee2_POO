@@ -17,18 +17,26 @@ export class Contacts {
 
     // Methods
 
-    printCalendar():string[]{
+    printCalendar():string {
         
         let arrayData:string[] = []
+        
         for (let people of this.people) {
-            console.log(people);
+            
             
             for (let property in people) {
-                let data:string = `${property} - ${people[property]}`
-                arrayData.push(data)
-            } 
+                    
+                if (typeof people[property] != 'function'){
+                
+                    arrayData.push(`
+                    ${property} - ${people[property]}`)
+                } 
+            
+            }
+            
         }
-        return arrayData
+        
+        return arrayData.join('')
     
     }
 
