@@ -67,7 +67,7 @@ export class Book {
     toString():string {
         let result:string[]=[]
         for (let property in this) {
-            if (typeof this[property] != 'function'){
+            if (this.hasOwnProperty(property)){
 
                 result.push(`
                 ${property} - ${this[property]}`)

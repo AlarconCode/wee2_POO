@@ -26,7 +26,7 @@ export class Contacts {
             
             for (let property in people) {
                     
-                if (typeof people[property] != 'function'){
+                if (people.hasOwnProperty(property)){
                 
                     arrayData.push(`
                     ${property} - ${people[property]}`)
