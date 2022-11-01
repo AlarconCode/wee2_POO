@@ -65,5 +65,9 @@ export class Vector {
 
     }
 
+    getElements() {
+        return this.elements
+    }
+
 
 }
