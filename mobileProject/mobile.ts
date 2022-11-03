@@ -62,5 +62,19 @@ export class Mobile {
         this.price = price
     }
 
+    // Methods
+
+    printAll():string {
+
+        return `“The characteristics of the mobile name are:
+        Name: ${this.name}
+        Trademark: ${this.trademark}
+        Model: ${this.model}
+        Color: ${this.color}
+        Price: ${this.price} 
+        `
+
+    }
+
 }
 
