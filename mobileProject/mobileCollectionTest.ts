@@ -12,12 +12,13 @@ let myMobile5 = new Mobile('Mobile of Jack', 'Samsung', 'Samsung s21', 'Blue', 1
 let myMobiles = [myMobile, myMobile2, myMobile3, myMobile4]
 let myMobiles2 = [myMobile, myMobile2, myMobile3, myMobile4, myMobile5]
 
-let myCollection = new mobileCollection(myMobiles)
+let myCollection = new mobileCollection(myMobiles2)
+console.log(myCollection.printCollection());
 
 console.log(myCollection.getMobiles());
 console.log(myCollection.getTotalPrice());
 
-myCollection.setMobiles(myMobiles2)
+myCollection.setMobiles(myMobiles)
 myCollection.setTotalPrice(6500)
 
 console.log(myCollection.getMobiles());

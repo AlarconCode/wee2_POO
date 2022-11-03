@@ -9,7 +9,7 @@ export class mobileCollection {
 
     constructor(mobiles:Mobile[]) {
         this.mobiles = mobiles
-        this.totalPrice
+        this.totalPrice = this.totalPriceCalculation()
     }
 
     // getters
@@ -30,6 +30,39 @@ export class mobileCollection {
 
     setTotalPrice(price:number) {
         this.totalPrice = price
+    }
+
+    // Methods
+
+    private totalPriceCalculation():number {
+        let total:number = 0
+        for (let mobile of this.mobiles) {
+            total += mobile.getPrice()
+        }
+        return total
+    }
+
+    printCollection() {
+        let collection = ''
+        for (let mobile of this.mobiles) {
+
+            collection += `The characteristics of the mobile name are:
+            Name: ${mobile.getName()}
+            Trademark: ${mobile.getTrademark()}
+            Model: ${mobile.getModel()}
+            Color: ${mobile.getColor()}
+            Price: ${mobile.getPrice()}
+
+            
+            `
+
+        }
+
+        return `
+        ${collection}
+        Price overall: ${this.totalPrice}`
+    
+
     }
 
 }
