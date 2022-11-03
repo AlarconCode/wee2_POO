@@ -1,7 +1,7 @@
 "use strict";
 // Function Zodiac Sign
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.zodiac = void 0;
+exports.isEven = void 0;
 function zodiac(day, month) {
     var aries = { sign: 'Aries', start: [21, 3], end: [19, 4] };
     var tauro = { sign: 'Tauro', start: [20, 4], end: [20, 5] };
@@ -24,8 +24,6 @@ function zodiac(day, month) {
     }
     return "Tu signo zodiacal es ".concat(result);
 }
-exports.zodiac = zodiac;
-console.log(zodiac(1, 5));
 function continent(country) {
     var continentes = [
         {
@@ -56,8 +54,13 @@ function continent(country) {
     }
     return result;
 }
-console.log(continent('India'));
 function isEven(number) {
-    number % 2 == 0 ? console.log('El número es par') : console.log('El número es impar');
+    if (number % 2 == 0) {
+        return 'El número es par';
+    }
+    else {
+        return 'El número es impar';
+    }
 }
+exports.isEven = isEven;
 isEven(11);

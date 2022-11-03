@@ -1,6 +1,6 @@
 // Function Zodiac Sign
 
-export {}
+export {isEven}
 
 function zodiac(day:number, month:number):string {
     
@@ -78,11 +78,15 @@ console.log(continent('India'));
 
 function isEven(number:number) {
 
-    number % 2 == 0 ? console.log('El número es par') : console.log('El número es impar');
-    
+    if (number % 2 == 0 ) {
+        return 'El número es par'
+    } else {
+        return 'El número es impar'
+    }
 
 }
 
 
-isEven(11)
+console.log(isEven(11));
+
 

@@ -1,12 +1,14 @@
 // Retos Bucles For
 
+export {add}
+
 function eveNumbers(num:number) {
     for (let i=0;i<=num;i++) {
         if (i % 2 != 0) console.log(i)
     }
 }
 
-eveNumbers(523)
+eveNumbers(3)
 
 function myRevert(myArr:any[]) {
 
