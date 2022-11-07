@@ -74,5 +74,27 @@ export class Point {
         return quadrant
     }
 
+    calculateNearest(points:Point[]) {
+
+        let arrDis:number[] = []
+        for (let i=0;i<points.length;i++) {
+                        
+            arrDis.push(this.calculateDistance(points[i]))
+            
+        }
+
+        let min = arrDis[0]
+        let result = 0
+        for (let i=0;i<arrDis.length;i++) {
+            if (arrDis[i] < min) {
+                result = i
+                min = arrDis[i]
+            }
+        }
+
+        return `El Point más cercano es el que esta en el indice ${result} del array de Points`
+ 
+    }
+
 
 }
