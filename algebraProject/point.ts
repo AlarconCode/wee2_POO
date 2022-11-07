@@ -48,5 +48,31 @@ export class Point {
 
     }
 
+    distanceToOrigin():number {
+
+        let distance = Math.sqrt(Math.pow((this.x - 0), 2) + Math.pow((this.y-0), 2))
+        return distance
+    
+    }
+
+    calculateDistance(anotherPoint:Point):number {
+
+        let distance = Math.sqrt(Math.pow((anotherPoint.x - this.x ), 2) + Math.pow((anotherPoint.y - this.y), 2))
+        return distance
+
+    }
+
+    calculateQuadrant():number {
+
+        let quadrant = 0
+        if (this.x == 0 || this.y == 0) { quadrant = 0}
+        if (this.x > 0 && this.y > 0 ) { quadrant = 1 }
+        if (this.x < 0 && this.y > 0) { quadrant = 2 }
+        if (this.x < 0 && this.y < 0) { quadrant = 3 }
+        if (this.x >0 && this.y < 0 ) { quadrant = 4 }
+
+        return quadrant
+    }
+
 
 }
