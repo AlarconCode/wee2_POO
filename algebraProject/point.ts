@@ -92,7 +92,7 @@ export class Point {
             }
         }
 
-        return `El Point más cercano es el que esta en el indice ${result} del array de Points`
+        return `El Point más cercano es el que esta en el indice ${result} del array de Points y es ${points[result]}`
  
     }
 
